@@ -7,8 +7,7 @@ class StateDaoDynamoImpl(StateDao):
     def __init__(self):
         print('initializing state dao dynamo')
         self.table_name = 'anagrams'
-        self.resources = boto3.resource('dynamodb', region_name='us-west-2', aws_access_key_id='AKIAT56UZRYZNCGR2R5A',
-                                        aws_secret_access_key='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')
+        self.resources = boto3.resource('dynamodb', region_name='us-west-2')
         self.word = 'kalpesh'
         self.table = self.resources.Table(self.table_name)
 
